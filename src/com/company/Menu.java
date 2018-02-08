@@ -23,6 +23,8 @@ public class Menu {
             switch (input.nextInt()) {
                 case 1:
                     // add game
+                    System.out.println("");
+
                     break;
                 case 2:
                     //remove game
