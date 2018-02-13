@@ -7,6 +7,7 @@ public class Game {
 
     public Game(String title) {
         this.title = title;
+        dueDate = "";
     }
 
     public String getTitle() {

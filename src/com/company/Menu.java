@@ -13,11 +13,11 @@ public class Menu {
                 " What would you like to do? " +
                 "\n 1. Add a game to the library  " +
                 "\n 2. Remove a game from the library " +
-                "\n3. View what is currently in the library " +
+                "\n 3. View what is currently in the library " +
                 "\n 4. Check a game out " +
                 "\n 5. Check a game in " +
-                "\n 6.View checked games " +
-                "\n Exit the program ");
+                "\n 6. View checked games " +
+                "\n 7. Exit the program ");
         try {
 
             switch (input.nextInt()) {
@@ -43,10 +43,13 @@ public class Menu {
                     break;
                 case 7:
                     //exit
+                    System.exit(0);
                     break;
                 default:
                     //print to pick 1 through 7, loop back to menu
                     break;
+                    //add limit for game library at 15 games
+                    //print "your library is full at 15 games", return to menu
 
             }
         } catch (InputMismatchException ime) {
