@@ -23,11 +23,20 @@ public class Menu {
             switch (input.nextInt()) {
                 case 1:
                     // add game
-                    System.out.println("");
-
+                    System.out.println("You have chosen to add a game \n " + "What is the title of this game?");
+                    input.nextLine();
+                    String title = input.nextLine();
+                    Game game = new Game (title);
+                    System.out.println("You have added " + game.getTitle() + " to your library. This game can now be checked out.");
                     break;
                 case 2:
                     //remove game
+                    System.out.println("You have chosen to remove a game from the library \n" + " Here is a list of games,"
+                    + " type the number of the one you would like to remove.");
+                    Library library = new Library (Game);
+                    Library.removeGame(input.nextInt());
+
+
                     break;
                 case 3:
                     // check out game
