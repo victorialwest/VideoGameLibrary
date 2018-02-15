@@ -2,9 +2,11 @@ package com.company;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+//Victoria West
 
 public class Menu {
     private Scanner input = new Scanner(System.in);
+    private Library library = new Library(this);
 
     //menu to prompt user for library options
     public void startMenu() {
@@ -33,10 +35,8 @@ public class Menu {
                     //remove game
                     System.out.println("You have chosen to remove a game from the library \n" + " Here is a list of games,"
                     + " type the number of the one you would like to remove.");
-                    Library library = new Library (Game);
-                    Library.removeGame(input.nextInt());
-
-
+                    library.listArrayItems();
+                    library.removeGame(input.nextInt());
                     break;
                 case 3:
                     // check out game

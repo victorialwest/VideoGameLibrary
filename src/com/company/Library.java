@@ -11,8 +11,7 @@ public class Library {
     private List <Game> gameLibrary = new ArrayList<Game>();
     private List<Game> checkedOutGame = new ArrayList<Game>();
     private SimpleDateFormat dateFormat= new SimpleDateFormat("MM/dd/yy");
-    private List<Game> addToList = new ArrayList<Game>();
-    private List<Game> removeFromList = new ArrayList<Game>();
+
 
     public Library(Menu menu){
         this.menu = menu;
@@ -39,6 +38,7 @@ public class Library {
         checkedOutGame.add(game);
         Calendar calendar = Calendar.getInstance();
         System.out.println("You have checked this game out on: " + dateFormat.format(calendar.getTime()));
+        calendar.add(Calendar.DAY_OF_WEEK, 7);
         System.out.println("Your game is due back on: " + dateFormat.format(calendar.getTime()));
         game.setDueDate(dateFormat.format(calendar.getTime()));
 
@@ -47,24 +47,14 @@ public class Library {
             menu.startMenu();
 
     }
-    private void addToList() {
 
 
+    public void listArrayItems(){
+        int index = 1;
 
-    }
+        for(String item : items);
 
-    private void removeFromList(){
-
-
-    }
-
-
-    private void listArrayItems(int code){
-       // int index = 1;
-
-        //for(String item : items);
-
-         //   System.out.println(index ++  +" ");
+        System.out.println(index ++  + " " );
 
 
     }
